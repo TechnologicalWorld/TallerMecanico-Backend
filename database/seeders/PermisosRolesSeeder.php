@@ -87,7 +87,18 @@ class PermisosRolesSeeder extends Seeder
             'permisos.eliminar',
 
             'auditoria.ver',
-            'auditoria.exportar', 
+            'auditoria.exportar',
+            
+            'clientes.ver',
+            'clientes.crear',
+            'clientes.editar',
+            'clientes.eliminar',
+
+            'vehiculos.ver',
+            'vehiculos.crear',
+            'vehiculos.editar',
+            'vehiculos.eliminar',
+            
         ];
 
         foreach ($permisos as $permiso) {

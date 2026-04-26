@@ -10,6 +10,12 @@ return Application::configure(basePath: dirname(__DIR__))
         commands: __DIR__.'/../routes/console.php',
         api: __DIR__.'/../routes/api.php',
         health: '/up',
+        then: function () {
+            // Registro de rutas API específicas para WorldTech
+            Route::middleware('api')
+                ->prefix('api')
+                ->group(base_path('routes/api_taller_mecanico.php'));
+        },
     )
     ->withMiddleware(function (Middleware $middleware): void {
         $middleware->append([
